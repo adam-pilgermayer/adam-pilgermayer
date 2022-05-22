@@ -17,3 +17,7 @@ p {
     margin-left: 10px;
     line-height: 1.4rem;
 }
+
+svg {
+    width: 40px;
+}
