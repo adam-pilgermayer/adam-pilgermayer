@@ -4,97 +4,155 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam Pilgermayer</title>
     <link rel="stylesheet" href="./css/style.css">
+    <title>Adam Pilgermayer</title>
 </head>
 <body>
-
-    <header>
+    <header class="fscr-hedr">
         <nav class="navbar">
-            <ul class="navbar-links">
-                <li><a href="#toHome">Home</a></li>
-                <li><a href="#toAbout">About</a></li>
-                <li><a href="#toSkills">Skills</a></li>
-                <li><a href="#toProjects">Projects</a></li>
-                <li><a href="#toContact">Contact</a></li>
+            <span class="fs-xl  navbar-logo">
+                AP
+            </span>
+            <div class="js-burger-menu-btn  burger-menu-btn">
+                <div class="burger-menu1"></div>
+                <div class="burger-menu2"></div>
+                <div class="burger-menu3"></div>
+            </div>
+            <ul class="ml-wide">
+                <li class="mlw-itm"><a href="#home" class="fs-m  mlw-skip">Home</a></li>
+                <li class="mlw-itm"><a href="#about" class="fs-m  mlw-skip">About</a></li>
+                <li class="mlw-itm"><a href="#tools" class="fs-m  mlw-skip">Tools</a></li>
+                <li class="mlw-itm"><a href="#projects" class="fs-m  mlw-skip">Projects</a></li>
+                <li class="mlw-itm"><a href="#contact" class="fs-m  mlw-skip">Contact</a></li>
             </ul>
+            <div class="js-menu  menu">
+                <ul class="ml">
+                    <li id="js-option1" class="ml-itm"><a href="#home" class="fs-xl  ml-skip">Home</a></li>
+                    <li id="js-option2" class="ml-itm"><a href="#about" class="fs-xl  ml-skip">About</a></li>
+                    <li id="js-option3" class="ml-itm"><a href="#tools" class="fs-xl  ml-skip">Tools</a></li>
+                    <li id="js-option4" class="ml-itm"><a href="#projects" class="fs-xl  ml-skip">Projects</a></li>
+                    <li id="js-option5" class="ml-itm"><a href="#contact" class="fs-xl  ml-skip">Contact</a></li>
+                </ul>
+                <a href="#" class="btn  btn-typ4  open-resume-btn  centr  fs-m"><svg class="download-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="#5dfdcb" d="M505.7 661a8 8 0 0 0 12.6 0l112-141.7c4.1-5.2.4-12.9-6.3-12.9h-74.1V168c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v338.3H400c-6.7 0-10.4 7.7-6.3 12.9l112 141.8zM878 626h-60c-4.4 0-8 3.6-8 8v154H214V634c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v198c0 17.7 14.3 32 32 32h684c17.7 0 32-14.3 32-32V634c0-4.4-3.6-8-8-8z"/></svg>Resume</a>
+                <div class="menu-socials">
+                    <a href="https://github.com/adam-pilgermayer" class="github-profile"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="40" height="40" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#fafafa" fill-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385c.6.105.825-.255.825-.57c0-.285-.015-1.23-.015-2.235c-3.015.555-3.795-.735-4.035-1.41c-.135-.345-.72-1.41-1.23-1.695c-.42-.225-1.02-.78-.015-.795c.945-.015 1.62.87 1.845 1.23c1.08 1.815 2.805 1.305 3.495.99c.105-.78.42-1.305.765-1.605c-2.67-.3-5.46-1.335-5.46-5.925c0-1.305.465-2.385 1.23-3.225c-.12-.3-.54-1.53.12-3.18c0 0 1.005-.315 3.3 1.23c.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23c.66 1.65.24 2.88.12 3.18c.765.84 1.23 1.905 1.23 3.225c0 4.605-2.805 5.625-5.475 5.925c.435.375.81 1.095.81 2.22c0 1.605-.015 2.895-.015 3.3c0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z" clip-rule="evenodd"/></svg></a>
+                    <a href="#" class="linkedin-profile"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="40" height="40" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#fafafa" fill-rule="evenodd" d="M1 2.838A1.838 1.838 0 0 1 2.838 1H21.16A1.837 1.837 0 0 1 23 2.838V21.16A1.838 1.838 0 0 1 21.161 23H2.838A1.838 1.838 0 0 1 1 21.161V2.838Zm8.708 6.55h2.979v1.496c.43-.86 1.53-1.634 3.183-1.634c3.169 0 3.92 1.713 3.92 4.856v5.822h-3.207v-5.106c0-1.79-.43-2.8-1.522-2.8c-1.515 0-2.145 1.089-2.145 2.8v5.106H9.708V9.388Zm-5.5 10.403h3.208V9.25H4.208v10.54ZM7.875 5.812a2.063 2.063 0 1 1-4.125 0a2.063 2.063 0 0 1 4.125 0Z" clip-rule="evenodd"/></svg></a>
+                </div>
+            </div>
         </nav>
+        <h1 id="home" class="fs-xxl  hello">Hello. I'm <span>Adam</span></h1>
+        <p class="txt-italic  fs-m    profession">A rookie front-end Developer</p>
+        <a href="#" class="btn  btn-typ4  hedr-open-resume-btn  centr  fs-m">CV</a>
+        <a class="btn  btn-typ1  contact-btn  centr  fs-m" href="#contact">CONTACT ME <span><svg class="anim-arrow-right" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="none" stroke="#5dfdcb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m-7-7l7 7l-7 7"/></svg></span></a>
+        <div class="centr  fs-xs  skip-to-projects">
+            <p class="txt-upr  attention">Take a look at my projects</p>
+            <a class="skip-btn" href="#projects">
+                <svg class="anim-arrow-down" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="65" height="65" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="#fafafa" fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/></svg>
+            </a>
+        </div>
     </header>
     <main>
-        <section class="main-home" id="toHome">
-            <h1>
-                <span>Hello.</span>
-                <span>I'm Adam</span>
-            </h1>
-            <p class="profession">A rookie front-end web developer.</p>
-            <div class="skip">
-                <a href="#toProjects">
-                    <p>Take a look at my projects</p>
-                    <img src="./content/icons/arrow_downward_FILL0_wght400_GRAD0_opsz48.svg" alt="go-to-projects">
-                </a>
+        <section id="about" class="main-sec">
+            <h2 class="fs-xxl  sec-title">About</h2>
+            <div class="centr  name-card">
+                <h3 class="txt-brzy  fs-l  me">Adam Pilgermayer</h3>
+                <p class="fs-s  txt-brzy  my-story">I started my journey to become a web developer in January, 2022. I'm passionate about making my products look great and user friendly.</p>
+                <p class="fs-s  txt-brzy  my-story">My goal is to build my websites responsive, with engaging design based on UX/UI best practices.</p>
             </div>
         </section>
-        <section class="main-about" id="toAbout">
-            <h2>About</h2>
-            <p>I started my journey to become a web developer in January 2022. I'm passionate about making my products look great and user friendly.</p>
-            <p>My goal is to build my websites responsive, with engaging design based on UX/UI best practices. </p>
-        </section>
-        <section class="main-skills" id="toSkills">
-            <h2>Skills</h2>
-            <div class="technologie-list">
-                <figure class="tech-box">
-                    <svg width="40px" height="40px" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>HTML5</title><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
-                    <figcaption>HTML5</figcaption>
+        <section id="tools" class="main-sec">
+            <h2 class="fs-xxl  sec-title">Tools</h2>
+            <p class="fs-m  centr  toolbox-desc">I use these to create my websites</p>
+            <div class="toolbox">
+                <figure class="tb_fig  tool">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="46.67" height="50" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 384"><path fill="#0ACF83" d="M64 384c35.328 0 64-28.672 64-64v-64H64c-35.328 0-64 28.672-64 64s28.672 64 64 64Z"/><path fill="#A259FF" d="M0 192c0-35.328 28.672-64 64-64h64v128H64c-35.328 0-64-28.672-64-64Z"/><path fill="#F24E1E" d="M0 64C0 28.672 28.672 0 64 0h64v128H64C28.672 128 0 99.328 0 64Z"/><path fill="#FF7262" d="M128 0h64c35.328 0 64 28.672 64 64s-28.672 64-64 64h-64V0Z"/><path fill="#1ABCFE" d="M256 192c0 35.328-28.672 64-64 64s-64-28.672-64-64s28.672-64 64-64s64 28.672 64 64Z"/></svg>
+                    <figcaption class="centr tool-name">FIGMA</figcaption>
                 </figure>
-                <figure class="tech-box">
-                    <svg width="40px" height="40px" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>CSS3</title><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/></svg>
-                    <figcaption>CSS3</figcaption>
+                <figure class="tb_fig  tool">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="70" height="50" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path fill="#e44f26" d="M5.902 27.201L3.655 2h24.69l-2.25 25.197L15.985 30L5.902 27.201z"/><path fill="#f1662a" d="m16 27.858l8.17-2.265l1.922-21.532H16v23.797z"/><path fill="#ebebeb" d="M16 13.407h-4.09l-.282-3.165H16V7.151H8.25l.074.83l.759 8.517H16v-3.091zm0 8.027l-.014.004l-3.442-.929l-.22-2.465H9.221l.433 4.852l6.332 1.758l.014-.004v-3.216z"/><path fill="#fff" d="M15.989 13.407v3.091h3.806l-.358 4.009l-3.448.93v3.216l6.337-1.757l.046-.522l.726-8.137l.076-.83h-7.185zm0-6.256v3.091h7.466l.062-.694l.141-1.567l.074-.83h-7.743z"/></svg>
+                    <figcaption class="centr  tool-name">HTML5</figcaption>
                 </figure>
-                <p><em>This list will be extended with other languages & technologies as soon as my knowledge is ready to show up here!</em></p>
+                <figure class="tb_fig  tool">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="70" height="50" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path fill="#1572b6" d="M5.902 27.201L3.656 2h24.688l-2.249 25.197L15.985 30L5.902 27.201z"/><path fill="#33a9dc" d="m16 27.858l8.17-2.265l1.922-21.532H16v23.797z"/><path fill="#fff" d="M16 13.191h4.09l.282-3.165H16V6.935h7.75l-.074.829l-.759 8.518H16v-3.091z"/><path fill="#ebebeb" d="m16.019 21.218l-.014.004l-3.442-.93l-.22-2.465H9.24l.433 4.853l6.331 1.758l.015-.004v-3.216z"/><path fill="#fff" d="m19.827 16.151l-.372 4.139l-3.447.93v3.216l6.336-1.756l.047-.522l.537-6.007h-3.101z"/><path fill="#ebebeb" d="M16.011 6.935v3.091H8.545l-.062-.695l-.141-1.567l-.074-.829h7.743zM16 13.191v3.091h-3.399l-.062-.695l-.14-1.567l-.074-.829H16z"/></svg>
+                    <figcaption class="centr  tool-name">CSS3</figcaption>
+                </figure>
+            </div>
+            <p class="txt-caps  centr fs-s  in-progress">this list will be extended with other languages & technologies soon!</p>
+            <p class="txt-caps  centr  fs-s  in-progress">learning in progress</p>
+            <div class="loading-container">
+                <div class="anim-loading-dots"></div>
+                <div class="anim-loading-dots"></div>
+                <div class="anim-loading-dots"></div>
             </div>
         </section>
-        <section class="main-projects" id="toProjects">
-            <h2>Projects</h2>
-            <p><strong>Coming Soon!</strong></p>
+        <section id="projects" class="main-sec">
+            <h2 class="fs-xxl  sec-title">Projects</h2>
+            <div class="project-container">
+                <div class="proj-card">
+                    <div class="proj-img-box">
+                        <img class="proj-img" src="./content/images/portfolio.png" alt="An image of my first portfolio webpage">
+                    </div>
+                    <div class="proj-details">
+                        <h4 class="fs-l  proj-name">My portfolio</h4>
+                        <p class="fs-xs  proj-desc">My front-end portfolio website.</p>
+                        <p class="fs-xs  proj-tools">
+                            <span><svg class="used-techs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="#fafafa" d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/></svg></span>
+                        figma, html, css, javascript
+                        </p>
+                        <div class="proj-btns">
+                            <a href="https://adam-pilgermayer.github.io/" class="btn  btn-typ2  demo-btn  centr  fs-m" target="_blank">Demo</a>
+                            <a href="https://github.com/adam-pilgermayer/adam-pilgermayer.github.io" class="btn  btn-typ1  github-link-btn  centr  fs-m" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="proj-card">
+                    <div class="proj-img-box">
+                        <img class="proj-img" src="./content/images/portfolio.png" alt="An image of my first portfolio webpage">
+                    </div>
+                    <div class="proj-details">
+                        <h4 class="fs-l  proj-name">My portfolio</h4>
+                        <p class="fs-xs  proj-desc">My front-end portfolio website.</p>
+                        <p class="fs-xs  proj-tools">
+                            <span><svg class="used-techs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="#fafafa" d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/></svg></span>
+                        figma, html, css, javascript
+                        </p>
+                        <div class="proj-btns">
+                            <a href="https://adam-pilgermayer.github.io/" class="btn  btn-typ2  demo-btn  centr  fs-m" target="_blank">Demo</a>
+                            <a href="https://github.com/adam-pilgermayer/adam-pilgermayer.github.io" class="btn  btn-typ1  github-link-btn  centr  fs-m" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="main-contact" id="toContact">
-            <h2>Contact</h2>
-            <p>Would you like to work with me on your project?</p>
-            <p>Then do not hesitate to message me.</p>
+        <section id="contact" class="main-sec">
+            <h2 class="fs-xxl  sec-title">Contact</h2>
+            <p class="fs-s  centr  hire-me">Would you like to work with me on your project?</p>
+            <p class="fs-s  centr  hire-me">Then do not hesitate to message me.</p>
             <form action="https://formspree.io/f/mlezowkb" method="POST" target="_blank">
-                <div class="form-name-input">
-                    <input class="input_box input_box--hover" type="text" name="customer_name" placeholder="Name" required>
-                </div>
-                <div class="form-email-input">
-                    <input class="input_box input_box--hover" type="email" name="customer_email" placeholder="Email" required>
-                </div>
-                <div class="form-message-input">
-                    <textarea class="input_box input_box--hover" name="customer_message" placeholder="Message" required></textarea>
-                </div>
-                <div class="form-submit">
-                    <input class="input_box input_box--hover" type="submit" value="Send message">
-                </div>
+                <input name="Customer Name" type="text" class="input-box" placeholder="NAME" required>
+                <input name="Customer Email" type="email" class="input-box" placeholder="EMAIL" required>
+                <textarea name="message" class="input-box  message-box" placeholder="MESSAGE" required></textarea>
+                <button type="submit" class="btn  btn-typ3  submit-btn  centr  fs-m">Send Message</button>
             </form>
         </section>
     </main>
-
     <footer>
-        <section class="footer-links">
-            <h2>Links</h2>
-                <ul class="footer-links--list">
-                    <li><a href="#toHome">Home</a></li>
-                    <li><a href="#toAbout">About</a></li>
-                    <li><a href="#toSkills">Skills</a></li>
-                    <li><a href="#toProjects">Projects</a></li>
-                    <li><a href="#toContact">Contact</a></li>
-                </ul>
-        </section>
-        <div class="footer-social">
-            <a href="#"><svg width="40px" height="40px" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
-            <a href="#"><svg width="40px" height="40px" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-        </div>
-        <span class="copyright">&copy; 2022</span>
+        <nav class="fs-s  nav-footr">
+            <ul class="nav-footr-l">
+                <li class="nav-footr-l-itm"><a href="#home" class="nav-footr-l-skip">Home</a></li>
+                <li class="nav-footr-l-itm"><a href="#about" class="nav-footr-l-skip">About</a></li>
+                <li class="nav-footr-l-itm"><a href="#tools" class="nav-footr-l-skip">Tools</a></li>
+                <li class="nav-footr-l-itm"><a href="#projects" class="nav-footr-l-skip">Projects</a></li>
+                <li class="nav-footr-l-itm"><a href="#contact" class="nav-footr-l-skip">Contact</a></li>
+            </ul>
+            <div class="nav-footr-socials">
+                <a href="https://github.com/adam-pilgermayer" class="github-profile" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="40" height="40" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#fafafa" fill-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385c.6.105.825-.255.825-.57c0-.285-.015-1.23-.015-2.235c-3.015.555-3.795-.735-4.035-1.41c-.135-.345-.72-1.41-1.23-1.695c-.42-.225-1.02-.78-.015-.795c.945-.015 1.62.87 1.845 1.23c1.08 1.815 2.805 1.305 3.495.99c.105-.78.42-1.305.765-1.605c-2.67-.3-5.46-1.335-5.46-5.925c0-1.305.465-2.385 1.23-3.225c-.12-.3-.54-1.53.12-3.18c0 0 1.005-.315 3.3 1.23c.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23c.66 1.65.24 2.88.12 3.18c.765.84 1.23 1.905 1.23 3.225c0 4.605-2.805 5.625-5.475 5.925c.435.375.81 1.095.81 2.22c0 1.605-.015 2.895-.015 3.3c0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z" clip-rule="evenodd"/></svg></a>
+                <a href="#" class="linkedin-profile" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="40" height="40" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#fafafa" fill-rule="evenodd" d="M1 2.838A1.838 1.838 0 0 1 2.838 1H21.16A1.837 1.837 0 0 1 23 2.838V21.16A1.838 1.838 0 0 1 21.161 23H2.838A1.838 1.838 0 0 1 1 21.161V2.838Zm8.708 6.55h2.979v1.496c.43-.86 1.53-1.634 3.183-1.634c3.169 0 3.92 1.713 3.92 4.856v5.822h-3.207v-5.106c0-1.79-.43-2.8-1.522-2.8c-1.515 0-2.145 1.089-2.145 2.8v5.106H9.708V9.388Zm-5.5 10.403h3.208V9.25H4.208v10.54ZM7.875 5.812a2.063 2.063 0 1 1-4.125 0a2.063 2.063 0 0 1 4.125 0Z" clip-rule="evenodd"/></svg></a>
+            </div>
+        </nav>
+        <p class="centr  copy">Adam Pilgermayer &copy; 2022</p>
     </footer>
 
+    <script src="./js/script.js"></script>
 </body>
 </html>
