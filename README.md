@@ -1,4 +1,7 @@
-### Hi there 👋
+# version 1.0 of my portfolio website
+
+
+
 
 <!--
 **adam-pilgermayer/adam-pilgermayer** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
