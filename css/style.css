@@ -6,7 +6,9 @@
 
 :root {
     --white: #FAFAFA;
+    --shady-white: #D8E4FF;
     --black: #242325;
+    --black-tp: rgba(0, 0, 0, 0.075);
     --light-green: #5DFDCB;
     --light-green-tp: rgba(92, 252, 201, 0.75);
     --green: #09E85E;
@@ -27,12 +29,6 @@
 @keyframes bounce {
     0% {transform: translateY(0);}
     100% {transform: translateY(40px);}
-}
-
-@keyframes loading {
-    0% {transform: translateY(0);}
-    50% {transform: translateY(-12px);}
-    100% {transform: translateY(0);}
 }
 
 /*********************************************************
@@ -90,7 +86,7 @@ a {
 .proj-tools,
 .hire-me,
 .nav-footr-l-skip,
-.copy { color: var(--white) }
+.copy { color: var(--white); }
 
 /* LIGHT GREENS */
 
@@ -100,7 +96,7 @@ a {
 .contact-btn,
 .github-link-btn,
 .btn-typ1,
-.input-box { color: var(--light-green) }
+.input-box { color: var(--light-green); }
 
 /* LIGHT GREEN TP */
 
@@ -111,20 +107,17 @@ a {
 /* LIGHT BLUE TP */
 
 .sec-title,
-.sec-title,
 ::placeholder {
-    color: var(--light-blue-tp);
+    color: var(--shady-white);
 }
 
 /* GREENS */
 
-.in-progress { color: var(--green) }
+.in-progress { color: var(--green); }
 
 /* BLACKS */
 
-.btn-typ2 {
-    color: var(--black);
-}
+.btn-typ2 { color: var(--black); }
 
 /**********************************************************
 *****************   FONT STYLE SETTINGS   *****************
@@ -139,7 +132,6 @@ a {
 
 /* NS-DISP-REG */
 
-.sec-title,
 .sec-title,
 .tool figcaption,
 .copy {
@@ -300,14 +292,14 @@ a {
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    height: 60px;
     padding: 0 26px;
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.075)
+    background-color: #7070701c;
 }
 
 .navbar-logo {
-    font-family: 'Shadows Into Light', cursive;;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 3rem;
 }
 
 .burger-menu-btn {
@@ -433,7 +425,6 @@ a {
 *****************   MAIN CONTENT   *****************
 ***************************************************/
 
-.sec-title,
 .sec-title {
     width: max-content;
     margin: 36px auto;
@@ -466,8 +457,13 @@ a {
 
 .toolbox {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 60px;
+}
+
+.tool {
+    margin: 12px;
 }
 
 .tool-name {
@@ -477,30 +473,6 @@ a {
 .in-progress {
     width: 300px;
     margin: 10px auto 0;
-}
-
-.loading-container {
-    width: 120px;
-    height: fit-content;
-    margin: 40px auto 0;
-    display: flex;
-}
-
-.anim-loading-dots {
-    width: 10px;
-    height: 10px;
-    margin: 0 auto;
-    background-color: var(--green);
-    border-radius: 50%;
-    animation: loading 1800ms ease-in-out infinite;
-}
-
-.anim-loading-dots:nth-child(2) {
-    animation: loading 1800ms ease-in-out 600ms infinite;
-}
-
-.anim-loading-dots:nth-child(3) {
-    animation: loading 1800ms ease-in-out 1200ms infinite;
 }
 
 .project-container {
@@ -521,7 +493,7 @@ a {
 }
 
 .proj-img {
-    max-width: 300px;
+    max-width: 100%;
 }
 
 
@@ -575,7 +547,7 @@ form {
 
 .input-box {
     width: 100%;
-    height: 35px;
+    height: 40px;
     margin: 8px 0;
     padding: 10px;
     border: none;
@@ -586,11 +558,11 @@ form {
 
 .input-box:focus {
     outline: 2px solid var(--light-green-tp);
-    background-color: rgba(0, 0, 0, 0.075);
+    background-color: var(--black-tp);
 }
 
 .message-box {
-    height: 140px;
+    height: 180px;
     resize: none;
 }
 
@@ -637,13 +609,6 @@ footer {
         display: none;
     }
 
-    .open,
-    .open * {
-        display: none;
-        background-color: transparent;
-    }
-
-    .menu,
     .open {
         display: none;
     }
@@ -652,15 +617,11 @@ footer {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        height: 60px;
-    }
-
-    .mlw-itm {
-        margin: 0;
     }
 
     .mlw-skip {
-        padding: 18px 8px;
+        padding: 18px;
+        display: block;
     }
 
     .menu-socials,
@@ -685,6 +646,9 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+    html {
+        font-size: 12px;
+    }
     
     .btn-typ1 svg {
         height: 20px;
@@ -713,7 +677,7 @@ footer {
     }
 
     .mlw-skip:hover {
-        background-color: rgba(0, 0, 0, 0.075);
+        background-color: var(--black-tp);
         color: var(--light-green);
     }
 
@@ -743,11 +707,11 @@ footer {
     .project-container {
         flex-direction: row;
         justify-content: space-around;
+        max-width: 1200px;
     }
 
-    .proj-card,
     .proj-img {
-        max-width: 400px;
+        max-width: 500px;
     }
 
     .proj-btns {
@@ -764,6 +728,15 @@ footer {
 }
 
 @media screen and (min-width: 992px) {
+    html {
+        font-size: 15px;
+    }
+
+    .toolbox {
+        max-width: 768px;
+        margin: 60px auto;
+    }
+
     .nav-footr {
         flex-direction: column;
         align-items: center;
@@ -773,7 +746,7 @@ footer {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        width: 200px;
+        width: 600px;
         gap: 40px;
         font-size: 1.6rem;
     }
