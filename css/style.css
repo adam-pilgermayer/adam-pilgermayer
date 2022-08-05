@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Noto+Sans+Display:wght@300;400;600&family=Noto+Sans:wght@100;400;500;700&family=Petrona:wght@600&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Libre+Baskerville:ital@1&family=Noto+Sans+Display:wght@300;400;600&family=Noto+Sans:wght@100;400;500;700&family=Petrona:wght@600&family=Shadows+Into+Light&display=swap');
 
 /************************************************
 *****************   VARIABLES   *****************
@@ -12,14 +12,14 @@
     --light-green: #5DFDCB;
     --light-green-tp: rgba(92, 252, 201, 0.75);
     --green: #09E85E;
-    --light-blue-tp: rgba(62, 161, 190, 0.356);
+    --light-blue-tp: rgba(62, 160, 190, 0.8);
     --blue: #283a68;
     --dark-blue: #111d3b;
 
     --font-Noto-Sans: 'Noto Sans', sans-serif;
     --font-Noto-Sans-Display: 'Noto Sans Display', sans-serif;
     --font-Petrona: 'Petrona', serif;
-    --font-LibreB: 'Libre Baskerville', serif;
+    --font-Abel: 'Abel', sans-serif;
 }
 
 /************************************************
@@ -177,10 +177,10 @@ a {
     font-weight: 700;
 }
 
-/* Libre */
+/* Abel */
 
 .profession {
-    font-family: var(--font-LibreB);
+    font-family: var(--font-Abel);
 }
 
 /* Petrona */
@@ -209,23 +209,23 @@ a {
 }
 
 .fs-xs {
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
 
 .fs-s {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 .fs-m {
-    font-size: 1.8rem;
+    font-size: 3rem;
 }
 
 .fs-l {
-    font-size: 2.4rem;
+    font-size: 3rem;
 }
 
 .fs-xl {
-    font-size: 5rem;
+    font-size: 4.5rem;
 }
 
 .fs-xxl {
@@ -244,7 +244,6 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 174px;
     padding: 4px;
     margin: 0 auto;
     letter-spacing: 3px;
@@ -253,11 +252,11 @@ a {
 }
 
 .btn-typ1 {
-    border: 3px solid var(--light-green);
+    border: 3px solid var(--light-green-tp);
 }
 
 .btn-typ2 {
-    background-color: var(--light-green);
+    background-color: var(--light-green-tp);
 }
 
 .btn-typ3 {
@@ -270,8 +269,10 @@ a {
 }
 
 .btn-typ4 {
-    background-color: var(--light-blue-tp);
-    border-radius: 40px;
+    background-color: var(--light-green-tp);
+    padding: 5px;
+    color: var(--black);
+    border-radius: 20px;
     border: none;
 }
 
@@ -294,12 +295,13 @@ a {
     width: 100vw;
     padding: 0 26px;
     z-index: 2;
-    background-color: #7070701c;
+    background-color: #293a57;
+    box-shadow: 0 -1px 20px var(--dark-blue);
 }
 
 .navbar-logo {
     font-family: 'Shadows Into Light', cursive;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .burger-menu-btn {
@@ -371,7 +373,8 @@ a {
 }
 
 .download-icon {
-    padding: 4px 4px 0 0;
+    width: 32px;
+    height: 26px;
 }
 
 .menu-socials .github-profile {
@@ -389,7 +392,8 @@ a {
 }
 
 .contact-btn {
-    margin-top: 60px;
+    margin-top: 50px;
+    padding: 10px;
     letter-spacing: 1px;
     width: fit-content;
 }
@@ -399,7 +403,8 @@ a {
 }
 
 .anim-arrow-right {
-    padding-top: 4px;
+    width: 32px;
+    height: 26px;
 }
 
 .skip-to-projects {
@@ -434,7 +439,7 @@ a {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 300px;
+    max-width: 750px;
     margin: 0 auto;
     background-color: var(--blue);
     padding: 12px;
@@ -466,6 +471,10 @@ a {
     margin: 12px;
 }
 
+.tool svg {
+    width: 80px;
+}
+
 .tool-name {
     margin: 6px 0 0;
 }
@@ -480,7 +489,6 @@ a {
     flex-flow: column wrap;
     align-items: center;
     background-color: var(--blue);
-    border-radius: 10px;
     width: 100%;
     margin: 0 auto;
 }
@@ -488,25 +496,34 @@ a {
 .proj-card {
     position: relative;
     overflow: hidden;
-    margin: 10px;
-
+    margin: 5px;
+    max-width: 500px;
 }
 
 .proj-img {
-    max-width: 100%;
+    width: 100%;
 }
 
 
 .proj-details {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     position: absolute;
-    padding: 12px 12px 0;
-    top: -230px;
+    top: -300px;
     left: 0;
     width: 100%;
     height: 100%;
     transition: all 500ms ease-out;
+}
+
+.proj-name {
+    margin: 10px auto;
+}
+
+.proj-desc,
+.proj-tools {
+    margin: 0 auto;
 }
 
 .proj-card:hover .proj-details {
@@ -531,9 +548,14 @@ filter: blur(2px);
 
 .proj-btns {
     position: relative;
-    top: 0px;
+    top: 10px;
     display: flex;
     gap: 6px;
+}
+
+.demo-btn,
+.github-link-btn {
+    width: 174px;
 }
 
 form {
@@ -586,11 +608,12 @@ footer {
 .nav-footr-socials {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 20px;
 }
 
 .copy {
-    background-color: var(--black);
+    font-size: 1.4rem;
     margin: 20px 0 0;
     padding: 10px 0;
 }
@@ -630,8 +653,7 @@ footer {
     }
 
     .contact-btn {
-        margin: 60px 20px;
-        padding: 10px;
+        margin: 50px 20px;
     }
 
     .profession {
@@ -643,17 +665,13 @@ footer {
         display: inline-block;
         width: 60px;
     }
+
+    .proj-btns {
+        top: 35px;
+    }
 }
 
 @media screen and (min-width: 768px) {
-    html {
-        font-size: 12px;
-    }
-    
-    .btn-typ1 svg {
-        height: 20px;
-    }
-
     .btn-typ1:hover {
         background-color: var(--light-green);
         color: var(--black);
@@ -664,7 +682,7 @@ footer {
     }
 
     .btn-typ2:hover {
-        background-color: var(--light-green-tp);
+        background-color: var(--light-green);
     }
 
     .btn-typ3:hover {
@@ -672,7 +690,7 @@ footer {
     }
 
     .btn-typ4:hover {
-        background-color: var(--light-green-tp);
+        background-color: var(--light-green);
         color: var(--black);
     }
 
@@ -694,10 +712,6 @@ footer {
         margin-left: 80px;
     }
 
-    .contact-btn svg {
-        height: 20px;
-    }
-
     .name-card,
     .toolbox-desc,
     .in-progress {
@@ -714,10 +728,6 @@ footer {
         max-width: 500px;
     }
 
-    .proj-btns {
-        top: 35px;
-    }
-
     form {
         width: 500px;
     }
@@ -728,10 +738,6 @@ footer {
 }
 
 @media screen and (min-width: 992px) {
-    html {
-        font-size: 15px;
-    }
-
     .toolbox {
         max-width: 768px;
         margin: 60px auto;
@@ -748,11 +754,14 @@ footer {
         justify-content: center;
         width: 600px;
         gap: 40px;
-        font-size: 1.6rem;
     }
 
     .nav-footr-socials {
         flex-direction: row;
         margin-top: 20px;
+    }
+
+    .proj-card {
+        margin: 40px;
     }
 }
