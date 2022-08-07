@@ -10,7 +10,7 @@
     --black: #242325;
     --black-tp: rgba(0, 0, 0, 0.075);
     --light-green: #5DFDCB;
-    --light-green-tp: rgba(92, 252, 201, 0.75);
+    --light-green-tp: rgba(92, 252, 201, 0.749);
     --green: #09E85E;
     --light-blue-tp: rgba(62, 160, 190, 0.8);
     --blue: #283a68;
@@ -79,7 +79,6 @@ a {
 .me,
 .my-story,
 .attention,
-.toolbox-desc,
 .tool figcaption,
 .proj-name,
 .proj-desc,
@@ -95,12 +94,12 @@ a {
 .hello span,
 .contact-btn,
 .github-link-btn,
-.btn-typ1,
 .input-box { color: var(--light-green); }
 
 /* LIGHT GREEN TP */
 
-.navbar-logo {
+.navbar-logo,
+.btn-typ1 {
     color: var(--light-green-tp);
 }
 
@@ -149,7 +148,6 @@ a {
 /* NS-REG */
 
 .my-story,
-.toolbox-desc,
 .hire-me,
 .input-box {
     font-family: var(--font-Noto-Sans);
@@ -208,6 +206,10 @@ a {
     word-spacing: 2px;
 }
 
+.fs-xxs {
+    font-size: 1.6rem;
+}
+
 .fs-xs {
     font-size: 2rem;
 }
@@ -221,15 +223,11 @@ a {
 }
 
 .fs-l {
-    font-size: 3rem;
-}
-
-.fs-xl {
     font-size: 4.5rem;
 }
 
-.fs-xxl {
-    font-size: 8rem;
+.fs-xl {
+    font-size: 6.5rem;
 }
 
 .centr {
@@ -281,10 +279,22 @@ a {
 ***********************************************************/
 
 .fscr-hedr {
-    background-image: url("../content/images/bg_im.png");
+    background-image: url("../content/images/bg/bg_im.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 100%;
+    min-height: 100vh;
+}
+
+.hedr-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 95vh;
+}
+
+.hedr-socials {
+    display: none;
 }
 
 .navbar {
@@ -409,7 +419,7 @@ a {
 
 .skip-to-projects {
     width: 100%;
-    margin-top: 50px;
+    margin: 50px 0;
 }
 
 .skip-btn {
@@ -455,11 +465,6 @@ a {
     margin: 10px auto;
 }
 
-.toolbox-desc {
-    width: 300px;
-    margin: 0 auto;
-}
-
 .toolbox {
     display: flex;
     flex-wrap: wrap;
@@ -491,17 +496,24 @@ a {
     background-color: var(--blue);
     width: 100%;
     margin: 0 auto;
+    padding: 20px 5px;
 }
 
 .proj-card {
     position: relative;
     overflow: hidden;
-    margin: 5px;
-    max-width: 500px;
+    margin: 20px;
+    box-shadow: 0 0 40px var(--dark-blue);
+}
+
+.proj-img-box {
+    height: 300px;
 }
 
 .proj-img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
@@ -514,16 +526,17 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
+    padding: 20px;
     transition: all 500ms ease-out;
 }
 
 .proj-name {
-    margin: 10px auto;
+    margin: 10px auto 20px;
 }
 
 .proj-desc,
 .proj-tools {
-    margin: 0 auto;
+    width: 300px;
 }
 
 .proj-card:hover .proj-details {
@@ -540,6 +553,7 @@ filter: blur(2px);
     display: flex;
     align-items: center;
     align-content: center;
+    margin-top: 10px;
 }
 
 .used-techs {
@@ -548,7 +562,7 @@ filter: blur(2px);
 
 .proj-btns {
     position: relative;
-    top: 10px;
+    top: 35px;
     display: flex;
     gap: 6px;
 }
@@ -562,7 +576,7 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 500px;
+    max-width: 600px;
     margin: 20px auto;
     padding: 0 20px;
 }
@@ -584,7 +598,7 @@ form {
 }
 
 .message-box {
-    height: 180px;
+    height: 220px;
     resize: none;
 }
 
@@ -618,9 +632,21 @@ footer {
     padding: 10px 0;
 }
 
+/****************************************************
+*****************   530px MEDIA Q   *****************
+****************************************************/
+
+@media screen and (min-width: 532px) {
+
+    .proj-img {
+        max-width: 500px;
+    }
+
+}
+
 
 /****************************************************
-*****************   768px MEDIA Q   *****************
+*****************   576px MEDIA Q   *****************
 ****************************************************/
 
 @media screen and (min-width: 576px) {
@@ -666,12 +692,29 @@ footer {
         width: 60px;
     }
 
-    .proj-btns {
-        top: 35px;
+    .hedr-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hedr-socials {
+        margin-right: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
     }
 }
 
+/****************************************************
+*****************   768px MEDIA Q   *****************
+****************************************************/
+
 @media screen and (min-width: 768px) {
+    .fs-xxl {
+        font-size: 8rem;
+    }
+
     .btn-typ1:hover {
         background-color: var(--light-green);
         color: var(--black);
@@ -694,26 +737,33 @@ footer {
         color: var(--black);
     }
 
+    .github-profile path,
+    .linkedin-profile path {
+        transition: 300ms fill ease-out ;
+    }
+
+    .github-profile:hover path,
+    .linkedin-profile:hover path {
+        fill: var(--light-green);
+    }
+
     .mlw-skip:hover {
         background-color: var(--black-tp);
         color: var(--light-green);
     }
 
     .hello {
-        width: 600px;
+        width: 400px;
+        margin-top: 40px;
     }
 
     .hello,
-    .profession {
-        padding-left: 60px;
-    }
-
+    .profession,
     .contact-btn {
-        margin-left: 80px;
+        margin-left: 160px;
     }
 
     .name-card,
-    .toolbox-desc,
     .in-progress {
         width: 750px;
     }
@@ -721,21 +771,21 @@ footer {
     .project-container {
         flex-direction: row;
         justify-content: space-around;
-        max-width: 1200px;
-    }
-
-    .proj-img {
-        max-width: 500px;
+        max-width: 1150px;
     }
 
     form {
-        width: 500px;
+        width: 600px;
     }
 
     .nav-footr-l-skip:hover {
         color: var(--light-green-tp);
     }
 }
+
+/****************************************************
+*****************   992px MEDIA Q   *****************
+****************************************************/
 
 @media screen and (min-width: 992px) {
     .toolbox {
@@ -759,9 +809,5 @@ footer {
     .nav-footr-socials {
         flex-direction: row;
         margin-top: 20px;
-    }
-
-    .proj-card {
-        margin: 40px;
     }
 }
