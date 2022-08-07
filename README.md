@@ -1,4 +1,4 @@
-# version 1.1 of my portfolio website
+# version 1.2 of my portfolio website
 
 
 
